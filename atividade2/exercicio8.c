@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main(){
-    float n, maior, x;
+    float n, acm;
     int escolha;
+    int x = 0;
     
     while (escolha != 0)
     {    
@@ -12,12 +13,10 @@ int main(){
             break;
         }
 
-        printf("Digite um número \n");
+        printf("Digite o preço do %i º item \n", (x+1));
         scanf("%f", &n);
-        maior = n;
-        if (n > x){
-            x = n;
-        }
+        acm +=n;
+        x++;
     }
-    printf("O maior número digitado foi o %.2f", x);
+    printf("O total da compra é de: R$ %.2f \n", acm);
 }
